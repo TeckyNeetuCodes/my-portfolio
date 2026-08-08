@@ -32,6 +32,7 @@
     --transition: 0.35s ease;
 }
 
+
 /* =========================
    Reset
 ========================= */
@@ -56,15 +57,20 @@ body {
     overflow-x: hidden;
 }
 
+
 /* =========================
    Reusable Container
 ========================= */
 
 .container {
+
     width: min(92%, 1200px);
+
     margin: 0 auto;
+
     padding: 0 20px;
 }
+
 
 /* =========================
    Navigation Bar
@@ -73,8 +79,11 @@ body {
 .navbar {
 
     position: fixed;
+
     top: 20px;
+
     left: 50%;
+
     transform: translateX(-50%);
 
     width: 92%;
@@ -140,6 +149,7 @@ body {
 
     color: var(--primary);
 }
+
 
 /* =========================
    Intro Section
@@ -281,6 +291,7 @@ body {
     transform: translateY(-3px);
 }
 
+
 /* =========================
    Intro Image
 ========================= */
@@ -304,13 +315,8 @@ body {
 
     border-radius: 20px;
 
-    transition: var(--transition);
-}
-
-.intro-image img {
-
     transition: transform 0.4s ease,
-        box-shadow 0.4s ease;
+                box-shadow 0.4s ease;
 }
 
 .intro-image img:hover {
@@ -319,6 +325,7 @@ body {
 
     box-shadow: 0 20px 40px rgba(79, 124, 255, 0.25);
 }
+
 
 /* =========================
    Social Links
@@ -371,179 +378,671 @@ body {
     transform: translateY(-4px);
 }
 
+
 /* =========================
    About Section
 ========================= */
 
-.about{
+.about {
 
-    padding:120px 0;
+    padding: 120px 0;
 }
 
-.section-title{
+.section-title {
 
-    font-family:var(--heading-font);
+    font-family: var(--heading-font);
 
-    font-size:3rem;
+    font-size: 3rem;
 
-    text-align:center;
+    text-align: center;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
 
-.about-text{
+.about-text {
 
-    max-width:850px;
+    max-width: 850px;
 
-    margin:0 auto 60px;
+    margin: 0 auto 60px;
 
-    text-align:center;
+    text-align: center;
 }
 
-.about-text p{
+.about-text p {
 
-    color:var(--text);
+    color: var(--text);
 
-    font-size:1.1rem;
+    font-size: 1.1rem;
 
-    line-height:1.9;
+    line-height: 1.9;
 }
+
 
 /* =========================
    About Cards
 ========================= */
 
-.about-cards{
+.about-cards {
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:25px;
+    gap: 25px;
 }
 
-.about-card{
+.about-card {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:25px;
+    gap: 25px;
 
-    padding:28px 35px;
+    padding: 28px 35px;
 
-    border-radius:24px;
+    border-radius: 24px;
 
-    background:rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter: blur(20px);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(79, 124, 255, 0.25);
 
-    transition:0.4s ease;
+    transition: 0.4s ease;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.about-card::before{
 
-    content:"";
+/* Card Hover */
 
-    position:absolute;
+.about-card:hover {
 
-    inset:0;
+    transform: translateY(-8px);
 
-    padding:1px;
-
-    border-radius:24px;
-
-    background:linear-gradient(
-        90deg,
-        #4F7CFF,
-        #8B5CF6,
-        #4F7CFF
-    );
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-
-            mask-composite:exclude;
-
-    opacity:0;
-
-    transition:.4s;
-}
-
-.about-card:hover::before{
-
-    opacity:1;
-}
-
-.about-card:hover{
-
-    transform:translateY(-8px);
+    border-color: rgba(125, 211, 252, 0.7);
 
     box-shadow:
-    0 0 35px rgba(79,124,255,.25);
+        0 15px 45px rgba(79, 124, 255, 0.20),
+        0 0 25px rgba(79, 124, 255, 0.12);
 }
 
-.card-icon{
 
-    width:75px;
+/* =========================
+   Card Icon
+========================= */
 
-    height:75px;
+.card-icon {
 
-    display:flex;
+    width: 75px;
 
-    align-items:center;
+    height: 75px;
 
-    justify-content:center;
+    display: flex;
 
-    font-size:2rem;
+    align-items: center;
 
-    border-radius:20px;
+    justify-content: center;
 
-    background:rgba(79,124,255,.12);
+    font-size: 2rem;
 
-    flex-shrink:0;
+    border-radius: 20px;
+
+    background: rgba(79, 124, 255, 0.12);
+
+    flex-shrink: 0;
 }
 
-.card-content{
 
-    flex:1;
+/* =========================
+   Card Content
+========================= */
+
+.card-content {
+
+    flex: 1;
 }
 
-.card-content h3{
+.card-content h3 {
 
-    font-family:var(--heading-font);
+    font-family: var(--heading-font);
 
-    font-size:1.45rem;
+    font-size: 1.45rem;
 
-    margin-bottom:8px;
+    margin-bottom: 8px;
 }
 
-.card-content p{
+.card-content p {
 
-    color:var(--text);
+    color: var(--text);
 
-    line-height:1.7;
+    line-height: 1.7;
 }
 
-.card-arrow{
 
-    font-size:2rem;
+/* =========================
+   Card Arrow
+========================= */
 
-    transition:.35s ease;
+.card-arrow {
+
+    font-size: 2rem;
+
+    transition: 0.35s ease;
 }
 
-.about-card:hover .card-arrow{
+.about-card:hover .card-arrow {
 
-    transform:translateX(10px);
+    transform: translateX(10px);
+
+    color: var(--accent);
+}
+
+/* =========================
+   Experience Section
+========================= */
+
+.experience {
+
+    padding: 120px 0;
+
+    position: relative;
+}
+
+.section-subtitle {
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Experience Timeline
+========================= */
+
+.experience-timeline {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* Vertical Timeline Line */
+
+.experience-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        var(--primary),
+        var(--secondary),
+        transparent
+    );
+
+    opacity: 0.6;
+}
+
+
+/* =========================
+   Experience Item
+========================= */
+
+.experience-item {
+
+    position: relative;
+
+    padding-left: 70px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Timeline Dot */
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: 11px;
+
+    top: 32px;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    border: 3px solid var(--primary);
+
+    box-shadow:
+        0 0 15px rgba(79, 124, 255, 0.7),
+        0 0 30px rgba(79, 124, 255, 0.3);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   Experience Card
+========================= */
+
+.experience-card {
+
+    padding: 30px 35px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(79, 124, 255, 0.18);
+
+    transition: var(--transition);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Gradient Glow */
+
+.experience-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary),
+        var(--secondary),
+        transparent
+    );
+
+    transition: 0.6s ease;
+}
+
+
+.experience-card:hover::before {
+
+    left: 100%;
+}
+
+
+/* Card Hover */
+
+.experience-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(125, 211, 252, 0.5);
+
+    box-shadow:
+        0 15px 45px rgba(79, 124, 255, 0.16),
+        0 0 30px rgba(79, 124, 255, 0.08);
+}
+
+
+/* =========================
+   Experience Header
+========================= */
+
+.experience-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.experience-header h3 {
+
+    font-family: var(--heading-font);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 7px;
+}
+
+
+.experience-header h4 {
+
+    color: var(--accent);
+
+    font-size: 1rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   Experience Date
+========================= */
+
+.experience-date {
+
+    flex-shrink: 0;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(79, 124, 255, 0.1);
+
+    border: 1px solid rgba(79, 124, 255, 0.2);
+
+    color: var(--text);
+
+    font-size: 0.85rem;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Experience Description
+========================= */
+
+.experience-card > p {
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    max-width: 800px;
+}
+
+/* =========================
+   Projects Section
+========================= */
+
+.projects {
+
+    padding: 120px 0;
+}
+
+
+/* =========================
+   Projects Grid
+========================= */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Project Card
+========================= */
+
+.project-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 32px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.025)
+        );
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Gradient glow */
+
+.project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    top: -120px;
+
+    right: -100px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+
+.project-card:hover::before {
+
+    opacity: 0.18;
+}
+
+
+/* Hover */
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(79,124,255,0.45);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.25),
+        0 0 35px rgba(79,124,255,0.12);
+}
+
+
+/* =========================
+   Project Top
+========================= */
+
+.project-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+
+.project-number {
+
+    font-family: var(--heading-font);
+
+    font-size: 0.9rem;
+
+    color: var(--accent);
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+
+.project-arrow {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255,255,255,0.04);
+
+    font-size: 1.3rem;
+
+    transition: 0.35s ease;
+}
+
+
+.project-card:hover .project-arrow {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================
+   Project Content
+========================= */
+
+.project-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.project-content h3 {
+
+    font-family: var(--heading-font);
+
+    font-size: 1.65rem;
+
+    margin-bottom: 14px;
+}
+
+
+.project-content p {
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   Project Tags
+========================= */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+
+.project-tags span {
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(79,124,255,0.08);
+
+    border: 1px solid rgba(79,124,255,0.18);
+
+    color: var(--text);
+
+    font-size: 0.78rem;
+
+    transition: 0.3s ease;
+}
+
+
+.project-card:hover .project-tags span {
+
+    border-color: rgba(125,211,252,0.3);
+
+    color: var(--white);
 }
