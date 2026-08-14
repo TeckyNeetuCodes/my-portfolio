@@ -2042,12 +2042,11 @@ body {
     background: rgba(79, 124, 255, 0.1);
 }
 
-.resume-dropdown:hover .resume-menu {
+.resume-dropdown.active .resume-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-
 /* =========================
    Certifications
 ========================= */
@@ -2097,4 +2096,22 @@ body {
 
 .certificate-card a:hover {
     text-decoration: underline;
+}
+
+/* Project Images */
+
+.project-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+    border-radius: 14px;
 }
